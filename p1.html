@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Component</title>
+    <style>
+        /* Ensure the layout is responsive */
+        * {
+            box-sizing: border-box;
+        }
+
+        .custom-component {
+            background-color: #FFFBF9;
+            width: auto; /* Adjust width to content size */
+            height: auto; /* Adjust height to content size */
+            display: flex; /* Flexbox to center content */
+            align-items: center; /* Vertically center content */
+            justify-content: flex-end; /* Align to the right */
+            position: relative;
+            padding: 20px; /* Optional padding for spacing */
+        }
+
+        .menu-button {
+            background-color: #F89E6E;
+            color: white;
+            width: 125px;
+            height: 50px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="custom-component">
+        <button class="menu-button">Menu</button>
+    </div>
+</body>
+</html>

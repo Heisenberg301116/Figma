@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Screen</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: transparent;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* Text styling */
+        .main-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .sub-text {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        /* Horizontal line styling */
+        .horizontal-line {
+            width: 210px;
+            height: 10px;
+            background-color: #F89E6E;
+            margin: 10px auto;
+        }
+
+        /* Small text below the line */
+        .small-text {
+            font-size: 1rem;
+            font-weight: normal;
+            color: black;
+            margin: 20px auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        /* Buttons styling */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .button {
+            width: 150px;
+            height: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .who-button {
+            background-color: #F89E6E;
+        }
+
+        .what-button,
+        .when-button,
+        .where-button,
+        .why-button,
+        .how-button {
+            background-color: #E2E1E1;
+            color: black;
+        }
+
+        /* Content section with two columns */
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 80%;
+        }
+
+        .column {
+            flex: 1;
+            text-align: left;
+        }
+
+        .column-text {
+            font-size: 1rem;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .image-column {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-column img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* Responsive styling */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .column,
+            .image-column {
+                flex: none;
+                width: 100%;
+            }
+
+            .image-column img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Text content -->
+    <div class="main-text">The Growth Playbook: 5 Wives and 1 Husband</div>
+    <div class="sub-text">Because answers drive results.</div>
+
+    <!-- Horizontal line -->
+    <div class="horizontal-line"></div>
+
+    <!-- Small text content -->
+    <div class="small-text">
+        At Nevada, the 5 Wives and 1 Husband aren't for drama—they're for direction. We lay it all out: who, what,
+        when, where, why, and how. The result? Clarity that simplifies complexity and accelerates your growth.
+    </div>
+
+    <!-- Buttons container -->
+    <div class="buttons-container">
+        <button class="button who-button">Who</button>
+        <button class="button what-button">What</button>
+        <button class="button when-button">When</button>
+        <button class="button where-button">Where</button>
+        <button class="button why-button">Why</button>
+        <button class="button how-button">How</button>
+    </div>
+
+    <!-- Content section with text and image side by side -->
+    <div class="content-container">
+        <!-- Text column -->
+        <div class="column">
+            <div class="column-text">Businesses looking for smarter AI,</div>
+            <div class="column-text">marketing and HubSpot solutions.</div>
+        </div>
+        <!-- Image column -->
+        <div class="image-column">
+            <img src="Images/1.png" alt="Image" />
+        </div>
+    </div>
+</body>
+
+</html>

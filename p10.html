@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            background-color: #1F465D;
+        }
+
+        .footer {
+            background-color: #1F465D;
+            color: white;
+            padding: 40px 80px;
+            padding-left: 25%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #f78e58;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #f78e58;
+        }
+
+        h3 {
+            color: #f78e58;
+        }
+
+        .newsletter {
+            flex: 1.5;
+        }
+
+        .newsletter p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .newsletter input {
+            width: 70%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            width: 50%;
+            background-color: #f78e58;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #e76e34;
+        }
+
+        img {
+            position: absolute;
+            top: 160px;
+            left: -160px;
+            width: auto;
+            height: 250px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <img src="Images/p10.png">
+
+        <div class="footer">
+            <div class="footer-section">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Why Nexveda</a></li>
+                    <li><a href="#">Browse our Services</a></li>
+                    <li><a href="#">Work with Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>OTHER LINKS</h3>
+                <ul>
+                    <li><a href="#">User Guidelines</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                    <li><a href="#">Plus subscriptions T&C</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>NEWSLETTER</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email Id" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Screen</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1F465D;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+            /* Prevent the horizontal scrollbar */
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            max-width: 100%;
+            padding: 0 40px;
+            /* Prevent content from touching the edges */
+        }
+
+        /* Title Styles */
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+            padding-bottom: 20px;
+            /* Space for arrows */
+            margin-bottom: 50px;
+            /* Add space to prevent overlapping */
+        }
+
+        .testimonial {
+            width: 70vw;
+            /* Keep width consistent */
+            height: 400px;
+            background-color: white;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quotes {
+            font-size: 200px;
+            margin-top: 90px;
+            line-height: 20px;
+            color: #F89E6E;
+            margin-bottom: 20px;
+        }
+
+        .testimonial .content {
+            font-size: 16px;
+            color: #8B8B8B;
+            margin-bottom: 30px;
+        }
+
+        .testimonial .ratings {
+            margin-bottom: 30px;
+            display: flex;
+            /* Align stars in a row */
+            justify-content: center;
+            /* Center stars */
+        }
+
+        .testimonial .ratings i {
+            font-size: 25px;
+            margin-right: 5px;
+            /* Add space between stars */
+        }
+
+        .testimonial .name {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .location {
+            font-size: 18px;
+            color: grey;
+        }
+
+        /* Golden Star Styling */
+        .testimonial .ratings i {
+            color: #D4AF37;
+        }
+
+        .testimonial .ratings i.grey {
+            color: grey;
+        }
+
+        /* Arrow Styles */
+        .arrow-left,
+        .arrow-right {
+            position: fixed;
+            top: 50%;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            transform: translateY(-50%);
+        }
+
+        .arrow-left {
+            left: 20px;
+            /* Fixed position for the left arrow */
+        }
+
+        .arrow-right {
+            right: 20px;
+            /* Fixed position for the right arrow */
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 1024px) {
+            .testimonials {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .testimonial {
+                width: 90%;
+                /* Ensure testimonials stay within container width */
+            }
+        }
+
+        img {
+            position: absolute;
+            bottom: -90px;
+            right: 20px;
+            width: auto;
+            height: 400px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="Images/p6.png">
+        <!-- Title -->
+        <div class="title">Testimonial</div>
+        <div class="subtitle">Our Client Feedback</div>
+
+        <!-- Testimonials -->
+        <div class="testimonials" id="testimonial-container">
+            <div class="testimonial">
+                <div class="quotes">“</div>
+                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit blanditiis,
+                    excepturi, aliquam error quibusdam debitis, tempore officiis et molestiae nulla vitae minus tempora
+                    natus nobis quidem iusto ratione rem labore commodi nihil sint quasi provident! Ipsum, saepe.
+                    Molestias, nulla.</div>
+                <div class="ratings">
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="grey">&#9733;</i>
+                    <i class="grey">&#9733;</i>
+                </div>
+                <div class="name">Lido Advisor</div>
+                <div class="location">USA</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="quotes">“</div>
+                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos perferendis
+                    atque accusantium facilis accusamus laborum animi soluta vel! Voluptate voluptatibus aperiam, nisi
+                    amet fugit laudantium, iusto adipisci veritatis recusandae voluptatem consequuntur cumque distinctio
+                    enim quia magni officiis cum! Aliquam.</div>
+                <div class="ratings">
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="grey">&#9733;</i>
+                </div>
+                <div class="name">Lido Advisor</div>
+                <div class="location">USA</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="quotes">“</div>
+                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa reiciendis
+                    officia unde doloremque facere sunt sequi officiis quasi perferendis, at aperiam sit tempora ipsa,
+                    corporis deleniti ducimus nulla animi dolorum cumque suscipit, est nemo? Culpa provident hic
+                    voluptatum eum.</div>
+                <div class="ratings">
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="gold">&#9733;</i>
+                    <i class="grey">&#9733;</i>
+                </div>
+                <div class="name">Lido Advisor</div>
+                <div class="location">USA</div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="arrow-left" onclick="scrollTestimonials('left')">&#8592;</div>
+        <div class="arrow-right" onclick="scrollTestimonials('right')">&#8594;</div>
+    </div>
+
+    <script>
+        function scrollTestimonials(direction) {
+            const container = document.getElementById('testimonial-container');
+            const scrollAmount = 350; // Scroll by this amount
+
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else if (direction === 'right') {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>

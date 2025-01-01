@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Screen</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FEFEFE;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: flex-start;
+        }
+
+        /* Title Styles */
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 15px;
+            color: #1F465D;
+            margin-top: 70px;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin-top: 10px;
+        }
+
+        /* Flex Container for Slides and Buttons */
+        .articles-container {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            position: absolute;
+            bottom: 15%;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .articles-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Article Slide */
+        .article {
+            width: 20vw;
+            height: 40vh;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .date {
+            font-size: 10px;
+            color: black;
+        }
+
+        .title-text {
+            font-size: 16px;
+            color: black;
+        }
+
+        .read-more {
+            font-size: 13px;
+            color: #F89E6E;
+            cursor: pointer;
+        }
+
+        /* Button Styles */
+        .arrow-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #F89E6E;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .arrow-left {
+            right: 10px;
+            position: relative;
+            top: 50%;
+            bottom: 50%;
+        }
+
+        .arrow-right {
+            left: 10px;
+            top: 50%;
+            bottom: 50%;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            top: -130px;
+            left: -250px;
+            width: auto;
+            height: 520px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Images/Ellipse 4.png">
+    <div class="title">Articles</div>
+    <div class="subtitle">Latest Articles & Blogs</div>
+
+    <div class="articles-container">
+
+
+        <!-- Article Slides -->
+        <div class="articles-slider" id="articles-slider">
+            <!-- Left Arrow Button -->
+            <button class="arrow-button arrow-left" onclick="scrollArticles('left')">&lt;</button>
+
+            <div class="article">
+                <div class="date">09 Dec, 2020</div>
+                <div class="title-text">Guide to Visas and Funding to Study in the UK</div>
+                <div class="read-more">Read More</div>
+            </div>
+
+            <div class="article">
+                <div class="date">10 Jan, 2021</div>
+                <div class="title-text">Guide to Visas and Funding to Study in the UK</div>
+                <div class="read-more">Read More</div>
+            </div>
+
+            <div class="article">
+                <div class="date">15 Feb, 2021</div>
+                <div class="title-text">Guide to Visas and Funding to Study in the UK</div>
+                <div class="read-more">Read More</div>
+            </div>
+
+            <!-- Right Arrow Button -->
+            <button class="arrow-button arrow-right" onclick="scrollArticles('right')">&gt;</button>
+        </div>
+
+
+    </div>
+
+    <script>
+        function scrollArticles(direction) {
+            const container = document.getElementById('articles-slider');
+            const scrollAmount = 300; // Adjust the scroll amount
+
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else if (direction === 'right') {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>

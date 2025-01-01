@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            /* Full width */
+            min-height: 100vh;
+            /* Full height */
+            background: linear-gradient(90deg, #183A59 70%, #ffffff 30%);
+            position: relative;
+        }
+
+        .content {
+            color: #ffffff;
+            padding: 20px;
+            flex: 0 0 70%;
+            /* 70% width for content */
+            position: relative;
+            z-index: 2;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* White horizontal line before the first service item */
+        .horizontal-line {
+            width: 240px;
+            height: 3px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .service-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-item h2 {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-item h2 span {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .service-item-content {
+            padding-left: 40px;
+            line-height: 20px;
+        }
+
+        .service-item p {
+            margin: 0.2rem 0 0.8rem;
+        }
+
+        .image {
+            width: 30%;
+            /* 30% width for image */
+            display: flex;
+            justify-content: start;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            /* Higher z-index to bring the image above the content */
+            flex-shrink: 0;
+            /* Prevent the image from shrinking */
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 100%;
+            /* Ensure image is at most 50% of content's width */
+            height: auto;
+            object-fit: contain;
+            position: relative;
+            left: 50%;
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Our Service</h1>
+
+            <!-- White horizontal line before the first service item -->
+            <div class="horizontal-line"></div>
+
+            <div class="service-item">
+                <h2><span>1</span> AI Solutions</h2>
+                <div class="service-item-content">
+                    <p><strong>AI Consulting:</strong> Strategies that turn data into decisions.</p>
+                    <p><strong>AI School:</strong> Build a workforce fluent in AI.</p>
+                    <p><strong>AI Upskilling:</strong> Turn your team into tech-savvy trailblazers.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h2><span>2</span> Growth Marketing</h2>
+                <div class="service-item-content">
+                    <p>Marketing built for game-changers and boundary-breakers.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <h2><span>3</span> HubSpot Expertise</h2>
+                <div class="service-item-content">
+                    <p>HubSpot solutions that don’t just work—they wow.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="Images/brain-ai.png" alt="AI Brain Illustration">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are Innovators</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .text-section {
+            max-width: 400px;
+        }
+
+        .text-section h1 {
+            font-size: 2.5rem;
+            line-height: 15px;
+        }
+
+        .text-section p {
+            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF8A5C;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #E5784C;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card,
+        .stat-card2,
+        .stat-card3 {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card2,
+        .stat-card3 {
+            top: 35px;
+            left: 65px;
+        }
+
+        .stat-card h2,
+        .stat-card2 h2,
+        .stat-card3 h2 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            z-index: 1;
+            position: relative;
+            color: #333;
+        }
+
+        .stat-card p,
+        .stat-card2 p,
+        .stat-card3 p {
+            font-size: 1rem;
+            position: relative;
+            margin: 0;
+            z-index: 1;
+            color: #333;
+        }
+
+        .rectangle-40,
+        .rectangle-41,
+        .rectangle-42 {
+            width: 150px;
+            position: absolute;
+            overflow: visible;
+            z-index: 0;
+        }
+
+        .rectangle-40 {
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .rectangle-41 {
+            left: 0px;
+            top: 0px;
+        }
+
+        .rectangle-42 {
+            right: 0px;
+            top: 0px;
+        }
+
+        /* Media Queries for Responsiveness */
+
+        /* For tablets and medium screens */
+        @media screen and (max-width: 1024px) {
+            .container {
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section {
+                max-width: 90%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .stat-card,
+            .stat-card2,
+            .stat-card3 {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .rectangle-40,
+            .rectangle-41,
+            .rectangle-42 {
+                width: 120px;
+                /* Adjust image sizes */
+            }
+
+            .stat-card2,
+            .stat-card3 {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* For smaller screens (mobile) */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .text-section {
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-card,
+            .stat-card2,
+            .stat-card3 {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+
+            .rectangle-40,
+            .rectangle-41,
+            .rectangle-42 {
+                width: 100px;
+                /* Adjust for smaller screens */
+            }
+
+            .stat-card2,
+            .stat-card3 {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* For very small screens (mobile portrait mode) */
+        @media screen and (max-width: 480px) {
+            .text-section h1 {
+                font-size: 1.8rem;
+                /* Reduce heading size */
+            }
+
+            .cta-button {
+                padding: 8px 16px;
+                font-size: 1rem;
+            }
+
+            .stat-card h2,
+            .stat-card2 h2,
+            .stat-card3 h2 {
+                font-size: 1.6rem;
+                /* Reduce font size */
+            }
+
+            .stat-card p,
+            .stat-card2 p,
+            .stat-card3 p {
+                font-size: 0.9rem;
+                /* Reduce paragraph font size */
+            }
+
+            .rectangle-40,
+            .rectangle-41,
+            .rectangle-42 {
+                width: 90px;
+                /* Further reduce image sizes */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>We are</h1>
+            <h1>Innovators</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</p>
+            <a href="#" class="cta-button">Let’s Talk Now</a>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <img class="rectangle-40" src="rough/images/rectangle-40.svg" />
+                <p>Satisfied Clients</p>
+                <h2>60+</h2>
+            </div>
+
+            <div class="stat-card2">
+                <img class="rectangle-41" src="rough/images/rectangle-41.svg" />
+                <p>Projects Completed</p>
+                <h2>1.5k+</h2>
+            </div>
+
+            <div class="stat-card3">
+                <img class="rectangle-42" src="rough/images/rectangle-42.svg" />
+                <p>Experience</p>
+                <h2>14+</h2>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
