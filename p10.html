@@ -7,7 +7,9 @@
     <title>Footer Design</title>
     <style>
         /* Ensure box-sizing includes padding and borders in width/height */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
@@ -15,7 +17,8 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
         }
 
         .main {
@@ -29,13 +32,15 @@
             padding-left: 25%;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
+            flex-wrap: wrap;
+            /* Ensure sections wrap on smaller screens */
         }
 
         .footer-section {
             flex: 1;
             margin-right: 20px;
-            min-width: 200px; /* Prevent section from shrinking too much */
+            min-width: 200px;
+            /* Prevent section from shrinking too much */
         }
 
         .footer-section h3 {
@@ -70,7 +75,8 @@
 
         .newsletter {
             flex: 1.5;
-            min-width: 200px; /* Prevent section from shrinking too much */
+            min-width: 200px;
+            /* Prevent section from shrinking too much */
         }
 
         .newsletter p {
