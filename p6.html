@@ -7,36 +7,45 @@
     <title>Testimonial Screen</title>
     <style>
         /* Global Styles */
+        html,
         body {
             margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            /* Remove both vertical and horizontal scrollbars */
             font-family: Arial, sans-serif;
+        }
+
+        body {
             background-color: #1F465D;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow-x: hidden;
-            /* Prevent the horizontal scrollbar */
+            height: 100%;
         }
 
         .container {
             text-align: center;
             position: relative;
             max-width: 100%;
-            padding: 0 40px;
-            /* Prevent content from touching the edges */
+            padding: 40px 40px 20px;
+            /* Adjusted padding: Added more space on top */
+            margin-top: 40px;
+            /* Added space from the top */
         }
+
 
         /* Title Styles */
         .title {
-            font-size: 14px;
+            font-size: 24px;
             font-weight: bold;
             color: white;
         }
 
         .subtitle {
-            font-size: 24px;
+            font-size: 30px;
             font-weight: bold;
             color: white;
             margin-top: 10px;
@@ -50,16 +59,12 @@
             gap: 20px;
             overflow-x: auto;
             scroll-behavior: smooth;
-            /* Smooth scrolling */
             padding-bottom: 20px;
-            /* Space for arrows */
             margin-bottom: 50px;
-            /* Add space to prevent overlapping */
         }
 
         .testimonial {
             width: 70vw;
-            /* Keep width consistent */
             height: 400px;
             background-color: white;
             position: relative;
@@ -86,15 +91,12 @@
         .testimonial .ratings {
             margin-bottom: 30px;
             display: flex;
-            /* Align stars in a row */
             justify-content: center;
-            /* Center stars */
         }
 
         .testimonial .ratings i {
             font-size: 25px;
             margin-right: 5px;
-            /* Add space between stars */
         }
 
         .testimonial .name {
@@ -109,7 +111,6 @@
             color: grey;
         }
 
-        /* Golden Star Styling */
         .testimonial .ratings i {
             color: #D4AF37;
         }
@@ -135,12 +136,10 @@
 
         .arrow-left {
             left: 20px;
-            /* Fixed position for the left arrow */
         }
 
         .arrow-right {
             right: 20px;
-            /* Fixed position for the right arrow */
         }
 
         /* Responsiveness */
@@ -152,7 +151,6 @@
 
             .testimonial {
                 width: 90%;
-                /* Ensure testimonials stay within container width */
             }
         }
 

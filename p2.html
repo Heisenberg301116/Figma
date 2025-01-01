@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simplify Complexity</title>
+  <title>Merged HTML Component</title>
   <style>
-    /* General Reset */
+    /* Ensure the layout is responsive */
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
+    /* File 1 Component Styles */
+    .custom-component {
+      background-color: #FFFBF9;
+      width: 100vw;
+      /* Adjust width to content size */
+      height: auto;
+      /* Adjust height to content size */
+      display: flex;
+      /* Flexbox to center content */
+      align-items: center;
+      /* Vertically center content */
+      justify-content: flex-end;
+      /* Align to the right */
+      position: relative;
+      padding: 20px;
+      /* Optional padding for spacing */
+    }
+
+    .menu-button {
+      background-color: #F89E6E;
+      color: white;
+      width: 125px;
+      height: 50px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 13px;
+    }
+
+    /* File 2 General Styles */
     body {
       background-color: black;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      /* Align the content at the top */
       font-family: Arial, sans-serif;
       color: white;
-      height: 100vh;
+      height: auto;
+      /* Adjust the height to the content */
       width: 100%;
-      padding: 0 5%;
-      overflow: hidden; /* Prevent scrolling */
+      padding: 0 0%;
+      overflow: hidden;
+      margin: 0;
+      /* Remove any default body margin */
     }
 
     .title {
-      font-size: 5vw; /* Reduced font size */
+      font-size: 5vw;
+      /* Reduced font size */
       font-weight: bold;
       color: white;
       text-align: center;
-      margin-top: 5vh;
+      margin-top: 15vh;
       width: 100%;
       max-width: 853px;
       line-height: 1;
     }
 
     .subtitle {
-      font-size: 3.5vw; /* Reduced font size */
+      font-size: 3.5vw;
+      /* Reduced font size */
       font-weight: bold;
       color: white;
       margin-top: 1.4vh;
@@ -58,7 +96,8 @@
     }
 
     .description {
-      font-size: 1.25vw; /* Reduced by 50% */
+      font-size: 1.25vw;
+      /* Reduced by 50% */
       color: white;
       width: 100%;
       max-width: 815px;
@@ -71,15 +110,18 @@
       background-color: #F89E6E;
       color: white;
       font-weight: bold;
-      padding: 0 30px; /* Add padding to ensure the button is wide enough */
+      padding: 0 30px;
+      /* Add padding to ensure the button is wide enough */
       margin-top: 4vh;
       border: none;
       text-align: center;
       line-height: 8vh;
       cursor: pointer;
-      font-size: 2vw; /* Adjusted font size */
+      font-size: 2vw;
+      /* Adjusted font size */
       border-radius: 8px;
-      display: inline-block; /* Automatically adjust width based on text */
+      display: inline-block;
+      /* Automatically adjust width based on text */
       transition: background-color 0.3s ease;
     }
 
@@ -116,7 +158,8 @@
 
       .button {
         font-size: 4vw;
-        width: auto; /* Let the button size automatically based on content */
+        width: auto;
+        /* Let the button size automatically based on content */
         margin-top: 5vh;
       }
     }
@@ -149,17 +192,27 @@
 
       .button {
         font-size: 6vw;
-        width: auto; /* Let the button size automatically based on content */
+        width: auto;
+        /* Let the button size automatically based on content */
         margin-top: 5vh;
       }
     }
   </style>
 </head>
+
 <body>
+  <!-- File 1 Component (Menu Button) -->
+  <div class="custom-component">
+    <button class="menu-button">Menu</button>
+  </div>
+
+  <!-- File 2 Content -->
   <div class="title">SimplifyComplexity</div>
   <div class="subtitle">& Amplify Results</div>
   <div class="line"></div>
-  <div class="description">Growth with consultative next-gen AI solutions, marketing strategies, and expert HubSpot services for today's fast-moving business.</div>
+  <div class="description">Growth with consultative next-gen AI solutions, marketing strategies, and expert HubSpot
+    services for today's fast-moving business.</div>
   <button class="button">Let's Talk Now</button>
 </body>
+
 </html>

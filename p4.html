@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
             overflow-x: hidden;
-            /* Prevent horizontal scrolling */
         }
 
         .container {
@@ -20,9 +19,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            /* Full width */
             min-height: 100vh;
-            /* Full height */
             background: linear-gradient(90deg, #183A59 70%, #ffffff 30%);
             position: relative;
         }
@@ -30,8 +27,7 @@
         .content {
             color: #ffffff;
             padding: 20px;
-            flex: 0 0 70%;
-            /* 70% width for content */
+            width: 70%;
             position: relative;
             z-index: 2;
         }
@@ -41,7 +37,6 @@
             margin-bottom: 1rem;
         }
 
-        /* White horizontal line before the first service item */
         .horizontal-line {
             width: 240px;
             height: 3px;
@@ -85,27 +80,38 @@
 
         .image {
             width: 30%;
-            /* 30% width for image */
             display: flex;
             justify-content: start;
             position: relative;
             top: 0;
             left: 0;
             z-index: 3;
-            /* Higher z-index to bring the image above the content */
             flex-shrink: 0;
-            /* Prevent the image from shrinking */
         }
 
         .image img {
             width: 100%;
             max-width: 100%;
-            /* Ensure image is at most 50% of content's width */
             height: auto;
             object-fit: contain;
             position: relative;
             left: 50%;
             transform: translateX(-100%);
+        }
+
+        /* Media query for screens smaller than 500px */
+        @media (max-width: 500px) {
+            .content {
+                width: 100vw;
+                /* Full viewport width */
+                padding: 0;
+                /* Optional, adjust padding if needed */
+            }
+
+            .image {
+                display: none;
+                /* Hide the image on screens smaller than 500px */
+            }
         }
     </style>
 </head>
@@ -114,8 +120,6 @@
     <div class="container">
         <div class="content">
             <h1>Our Service</h1>
-
-            <!-- White horizontal line before the first service item -->
             <div class="horizontal-line"></div>
 
             <div class="service-item">
@@ -126,12 +130,14 @@
                     <p><strong>AI Upskilling:</strong> Turn your team into tech-savvy trailblazers.</p>
                 </div>
             </div>
+
             <div class="service-item">
                 <h2><span>2</span> Growth Marketing</h2>
                 <div class="service-item-content">
                     <p>Marketing built for game-changers and boundary-breakers.</p>
                 </div>
             </div>
+
             <div class="service-item">
                 <h2><span>3</span> HubSpot Expertise</h2>
                 <div class="service-item-content">

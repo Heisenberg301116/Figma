@@ -13,6 +13,12 @@
             box-sizing: border-box;
         }
 
+        /* Prevent horizontal and vertical scrolling */
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
+
         body {
             display: flex;
             justify-content: center;
@@ -22,6 +28,7 @@
             background-color: transparent;
             text-align: center;
             flex-direction: column;
+            padding: 20px; /* Added padding to prevent overflow */
         }
 
         /* Text styling */
@@ -123,6 +130,23 @@
 
         /* Responsive styling */
         @media screen and (max-width: 768px) {
+            .main-text {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            .sub-text {
+                font-size: 1.2rem; /* Adjust font size for smaller screens */
+            }
+
+            .horizontal-line {
+                width: 150px; /* Make the line smaller */
+            }
+
+            .small-text {
+                font-size: 0.9rem; /* Smaller font for small text */
+                width: 70%; /* Increase width to make text more readable */
+            }
+
             .content-container {
                 flex-direction: column;
                 text-align: center;
@@ -135,8 +159,31 @@
             }
 
             .image-column img {
-                max-width: 100%;
+                max-width: 200px; /* Reduce image size on smaller screens */
                 height: auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .main-text {
+                font-size: 1.5rem; /* Further reduce font size for very small screens */
+            }
+
+            .sub-text {
+                font-size: 1rem;
+            }
+
+            .horizontal-line {
+                width: 120px;
+            }
+
+            .small-text {
+                font-size: 0.8rem;
+                width: 80%;
+            }
+
+            .image-column img {
+                max-width: 150px; /* Further reduce image size */
             }
         }
     </style>
