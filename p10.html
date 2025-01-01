@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer Design</title>
     <style>
+        /* Ensure box-sizing includes padding and borders in width/height */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .main {
@@ -23,12 +29,13 @@
             padding-left: 25%;
             display: flex;
             justify-content: space-between;
-
+            flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
         }
 
         .footer-section {
             flex: 1;
             margin-right: 20px;
+            min-width: 200px; /* Prevent section from shrinking too much */
         }
 
         .footer-section h3 {
@@ -63,6 +70,7 @@
 
         .newsletter {
             flex: 1.5;
+            min-width: 200px; /* Prevent section from shrinking too much */
         }
 
         .newsletter p {
@@ -106,6 +114,79 @@
             height: 250px;
             z-index: 10;
         }
+
+        /* Media Query for smaller screens (less than 768px) */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 40px 20px;
+                padding-left: 0;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-right: 0;
+                margin-bottom: 20px;
+                flex: none;
+                width: 100%;
+            }
+
+            .newsletter {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .newsletter input {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .newsletter button {
+                width: 80%;
+            }
+
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: auto;
+                margin-top: 20px;
+            }
+        }
+
+        /* Media Query for very small screens (less than 500px) */
+        @media (max-width: 500px) {
+            .footer {
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-section h3 {
+                font-size: 18px;
+            }
+
+            .footer-section ul li {
+                font-size: 12px;
+            }
+
+            .newsletter input {
+                width: 100%;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+            img {
+                width: 80px;
+                height: auto;
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -144,7 +225,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 </body>
 
